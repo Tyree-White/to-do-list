@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    background-color:#3882f6;
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 7vh;
+    padding: 3vh;
+    color: #1f2937;
+}
+
+.sidebar {
+    background-color: #1f2937;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.content {
+    background-color: #e5e7eb;
+    grid-area: 2 / 2 / 3 / 3;
+}
