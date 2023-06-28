@@ -31,9 +31,18 @@ body {
 .content {
     background-color: #e5e7eb;
     grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sidebar>div {
     font-size: 5vh;
     margin-left: 15vh;
+}
+
+.allTaskBtn {
+    margin-top: 2vh;
+    color: #e5e7eb;
+    background-color: #3882f6;
 }

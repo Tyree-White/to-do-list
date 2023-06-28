@@ -12,7 +12,7 @@ function loadAll() {
 
     const addTaskBtn  = document.createElement('button');
     addTaskBtn.textContent = 'Add Task';
-    addTaskBtn.classList.add('allTaskButton');
+    addTaskBtn.classList.add('allTaskBtn');
     content.appendChild(addTaskBtn);
 }
 
