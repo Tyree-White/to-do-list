@@ -46,3 +46,19 @@ body {
     color: #e5e7eb;
     background-color: #3882f6;
 }
+
+form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  background-color: #1f2937;
+  padding: 5vh;
+  border-radius: 5vh;
+  color: white;
+  height: 50vh;
+  justify-content: space-evenly;
+}

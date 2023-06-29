@@ -14,6 +14,10 @@ function loadAll() {
     addTaskBtn.textContent = 'Add Task';
     addTaskBtn.classList.add('allTaskBtn');
     content.appendChild(addTaskBtn);
+
+    const form = document.querySelector('form');
+
+    addTaskBtn.addEventListener('click', () => form.style.visibility = 'visible');
 }
 
 export default loadAll;
