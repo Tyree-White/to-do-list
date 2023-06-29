@@ -16,6 +16,11 @@ function loadAll() {
     content.appendChild(addTaskBtn);
 
     const form = document.querySelector('form');
+    const allSubmitBtn = document.createElement('button');
+    allSubmitBtn.type = 'submit';
+    allSubmitBtn.textContent = 'Create Task';
+    allSubmitBtn.style.background = '#3882f6'
+    form.appendChild(allSubmitBtn);
 
     addTaskBtn.addEventListener('click', () => form.style.visibility = 'visible');
 }
