@@ -29,10 +29,10 @@ function loadAll() {
 
     function createTask() {
       event.preventDefault();
-      const titleInfo = document.getElementById('title').value;
-      const descriptionInfo = document.getElementById('description').value;
-      const priorityInfo = document.getElementById('priority').value;
-      const dateInfo = document.getElementById('date').value;
+      let titleInfo = document.getElementById('title');
+      let descriptionInfo = document.getElementById('description');
+      let priorityInfo = document.getElementById('priority');
+      let dateInfo = document.getElementById('date');
 
       function addTaskToAllLibrary(task) {
         allLibrary.push(task);
@@ -47,8 +47,13 @@ function loadAll() {
         }
       }
 
-      const newTask = new Task(titleInfo, descriptionInfo, priorityInfo, dateInfo);
+      const newTask = new Task(titleInfo.value, descriptionInfo.value, priorityInfo.value, dateInfo.value);
       addTaskToAllLibrary(newTask);
+      console.log(newTask, allLibrary);
+
+      titleInfo.value = '';
+      descriptionInfo.value = '';
+      priorityInfo.value = '';
     }
 }
 
