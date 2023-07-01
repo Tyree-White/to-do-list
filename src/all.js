@@ -64,6 +64,58 @@ function loadAll() {
       priorityInfo.value = '';
 
       form.style.visibility = 'hidden';
+      
+        let i = 0;
+        allLibrary.forEach(task => {
+          i++;
+  
+          const allContainer = document.querySelector('.allContainer');
+          const taskDiv = document.createElement('div');
+          taskDiv.className = 'task';
+          taskDiv.dataset.index = i;
+          allContainer.appendChild(taskDiv);
+  
+          const titleDiv = document.createElement('div');
+          titleDiv.className = 'title';
+          titleDiv.dataset.index = `${i}-title`;
+          const descriptionDiv = document.createElement('div');
+          descriptionDiv.className = 'description';
+          descriptionDiv.dataset.index = `${i}-description`;
+          const priorityDiv = document.createElement('div');
+          priorityDiv.className = 'priority';
+          priorityDiv.dataset.index = `${i}-priority`;
+          const dateDiv = document.createElement('div');
+          dateDiv.className = 'date';
+          dateDiv.dataset.index = `${i}-date`;
+          const statusBtn = document.createElement('button');
+          statusBtn.className = 'statusBtn';
+          statusBtn.type = 'button';
+          statusBtn.dataset.index =  i;
+          statusBtn.textContent = 'Change date Status';
+          const editBtn = document.createElement('button');
+          editBtn.className = 'editBtn';
+          editBtn.type = 'button';
+          editBtn.dataset.index = i;
+          editBtn.textContent = 'Edit';
+          const deleteBtn = document.createElement('button');
+          deleteBtn.className = 'deleteBtn';
+          deleteBtn.type = 'button';
+          deleteBtn.dataset.index = i;
+          deleteBtn.textContent = 'Delete';
+  
+          taskDiv.appendChild(titleDiv);
+          taskDiv.appendChild(descriptionDiv);
+          taskDiv.appendChild(priorityDiv);
+          taskDiv.appendChild(dateDiv);
+          taskDiv.appendChild(statusBtn);
+          taskDiv.appendChild(editBtn);
+          taskDiv.appendChild(deleteBtn);
+  
+          titleDiv.textContent = `${task.title}`;
+          descriptionDiv.textContent = `${task.description}`;
+          priorityDiv.textContent = `${task.priority}`;
+          dateDiv.textContent = `${task.date}`;
+        });
     }
 }
 
