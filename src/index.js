@@ -17,3 +17,20 @@ let importantLibrary = [];
 let todayLibrary = [];
 let weekLibrary = [];
 let projectLibrary = [];
+
+function addTaskToAllLibrary(task) {
+  allLibrary.push(task);
+}
+
+function addTaskToImportantLibrary(task) {
+  importantLibrary.push(task);
+}
+function addTaskToTodayLibrary(task) {
+  todayLibrary.push(task);
+}
+function addTaskToWeekLibrary(task) {
+  weekLibrary.push(task);
+}
+function addTaskToProjectLibrary(task) {
+  projectLibrary.push(task);
+}
