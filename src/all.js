@@ -54,6 +54,8 @@ function loadAll() {
       titleInfo.value = '';
       descriptionInfo.value = '';
       priorityInfo.value = '';
+
+      form.style.visibility = 'hidden';
     }
 }
 
