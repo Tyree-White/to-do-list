@@ -62,3 +62,11 @@ form {
   height: 50vh;
   justify-content: space-evenly;
 }
+
+.task {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    background-color: #1f2937;
+    color: white;
+}
