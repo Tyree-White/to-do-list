@@ -12,15 +12,11 @@ loadToday();
 loadWeek();
 loadProjects();
 
-let allLibrary = [];
 let importantLibrary = [];
 let todayLibrary = [];
 let weekLibrary = [];
 let projectLibrary = [];
 
-function addTaskToAllLibrary(task) {
-  allLibrary.push(task);
-}
 
 function addTaskToImportantLibrary(task) {
   importantLibrary.push(task);
@@ -33,13 +29,4 @@ function addTaskToWeekLibrary(task) {
 }
 function addTaskToProjectLibrary(task) {
   projectLibrary.push(task);
-}
-
-class Task {
-  constructor(title, description, priority, date) {
-    this.title = title;
-    this.description = description;
-    this.priority = priority;
-    this.date = date;
-  }
 }

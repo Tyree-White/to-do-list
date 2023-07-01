@@ -1,4 +1,6 @@
 function loadAll() {
+    let allLibrary = [];
+
     const sidebar = document.querySelector('.sidebar');
     const all = document.createElement('div');
     all.textContent = 'All'
@@ -19,10 +21,35 @@ function loadAll() {
     const allSubmitBtn = document.createElement('button');
     allSubmitBtn.type = 'submit';
     allSubmitBtn.textContent = 'Create Task';
-    allSubmitBtn.style.background = '#3882f6'
+    allSubmitBtn.style.background = '#3882f6';
     form.appendChild(allSubmitBtn);
 
+    allSubmitBtn.addEventListener('click', createTask);
     addTaskBtn.addEventListener('click', () => form.style.visibility = 'visible');
+
+    function createTask() {
+      event.preventDefault();
+      const titleInfo = document.getElementById('title').value;
+      const descriptionInfo = document.getElementById('description').value;
+      const priorityInfo = document.getElementById('priority').value;
+      const dateInfo = document.getElementById('date').value;
+
+      function addTaskToAllLibrary(task) {
+        allLibrary.push(task);
+      }      
+
+      class Task {
+        constructor(title, description, priority, date) {
+          this.title = title;
+          this.description = description;
+          this.priority = priority;
+          this.date = date;
+        }
+      }
+
+      const newTask = new Task(titleInfo, descriptionInfo, priorityInfo, dateInfo);
+      addTaskToAllLibrary(newTask);
+    }
 }
 
 export default loadAll;
