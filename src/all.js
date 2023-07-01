@@ -34,6 +34,14 @@ function loadAll() {
       let priorityInfo = document.getElementById('priority');
       let dateInfo = document.getElementById('date');
 
+      if (titleInfo.value === '') {
+        return alert('Fill in the title field');
+      } else if (descriptionInfo.value === '') {
+        return alert('Fill in the description field');
+      } else if (priorityInfo.value === '') {
+        return alert('Choose prioity level');
+      }
+
       function addTaskToAllLibrary(task) {
         allLibrary.push(task);
       }      
